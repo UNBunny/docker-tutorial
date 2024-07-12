@@ -1,10 +1,10 @@
-FROM python3.8-slim
+FROM python:3.8-slim
 
-WORKDIR app
+WORKDIR /app
 
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD [python, app.py]
+CMD ["python", "app.py"]
